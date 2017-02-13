@@ -1,6 +1,6 @@
 {
     "name": "modelproxy-engine-jquery",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "modelproxy的engine；前端使用。",
     "main": "index.js",
     "scripts": {
@@ -26,7 +26,7 @@
     "dependencies": {
         "jquery": "1.9.1",
         "lodash": "^4.17.4",
-        "modelproxy": "^0.2.0"
+        "modelproxy": "^0.3.0"
     },
     "devDependencies": {
         "ts-loader": "^2.0.0",
