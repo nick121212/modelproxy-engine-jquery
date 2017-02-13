@@ -1,6 +1,6 @@
 import { modelProxy, ModelProxy } from 'modelproxy';
 
-export class JqueryEngine extends modelProxy.BaseEngine implements ModelProxy.IEngine {
+export class JqueryEngine extends modelProxy.BaseEngine {
     constructor() {
         super();
 
@@ -9,7 +9,7 @@ export class JqueryEngine extends modelProxy.BaseEngine implements ModelProxy.IE
 
             await next();
 
-            console.log(Date.now() - startTime);
+            console.log(`执行时间${Date.now() - startTime}ms`);
         });
 
         this.use(async (ctx: ModelProxy.IProxyCtx, next) => {
@@ -31,10 +31,6 @@ export class JqueryEngine extends modelProxy.BaseEngine implements ModelProxy.IE
         });
     }
 
-    validate(instance: ModelProxy.IInterfaceModel, options: ModelProxy.IExeucte): boolean {
-        return true;
-    }
-
     async proxy(instance: ModelProxy.IInterfaceModel, options: ModelProxy.IExeucte): Promise<any> {
         let ctx: ModelProxy.IProxyCtx = {
             instance: instance,
@@ -42,7 +38,7 @@ export class JqueryEngine extends modelProxy.BaseEngine implements ModelProxy.IE
         }, fn = this.callback(() => {
             console.log("over");
         });
-        
+
         await fn(ctx);
 
         return ctx.result;

@@ -114,7 +114,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        return [4 /*yield*/, next()];
 	                    case 1:
 	                        _a.sent();
-	                        console.log(Date.now() - startTime);
+	                        console.log("\u6267\u884C\u65F6\u95F4" + (Date.now() - startTime) + "ms");
 	                        return [2 /*return*/];
 	                }
 	            });
@@ -156,9 +156,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }); });
 	        return _this;
 	    }
-	    JqueryEngine.prototype.validate = function (instance, options) {
-	        return true;
-	    };
 	    JqueryEngine.prototype.proxy = function (instance, options) {
 	        return __awaiter(this, void 0, void 0, function () {
 	            var ctx, fn;
