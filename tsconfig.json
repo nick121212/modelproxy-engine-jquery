@@ -1,0 +1,24 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "classic",
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noLib": false,
+    "outDir": "built/",
+    "lib": [
+      "dom",
+      "es5",
+      "es2016"
+    ],
+    "typeRoots": [
+      "typings/index.d.ts"
+    ]
+  }
+}

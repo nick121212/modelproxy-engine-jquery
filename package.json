@@ -1,0 +1,32 @@
+{
+    "name": "modelproxy-engine-jquery",
+    "version": "0.1.3",
+    "description": "modelproxy的engine；前端使用。",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test",
+        "build": "webpack"
+    },
+    "bugs": {
+        "url": "https://github.com/nick121212/modelproxy-engine-jquery/issues"
+    },
+    "homepage": "https://github.com/nick121212/modelproxy-engine-jquery#readme",
+    "keywords": [
+        "modelproxy",
+        "engine",
+        "javascript",
+        "typescript"
+    ],
+    "author": "nick",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "1.9.1",
+        "lodash": "^4.17.4",
+        "modelproxy": "^0.2.0"
+    },
+    "devDependencies": {
+        "ts-loader": "^2.0.0",
+        "typescript": "^2.1.5",
+        "webpack": "^1.14.0"
+    }
+}
