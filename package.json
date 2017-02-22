@@ -1,6 +1,6 @@
 {
     "name": "modelproxy-engine-jquery",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "modelproxy的engine；前端使用。",
     "main": "index.js",
     "scripts": {

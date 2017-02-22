@@ -1,14 +1,20 @@
 import { modelProxy, ModelProxy } from 'modelproxy';
 
+/**
+ * jquery engine
+ * 前端配置modelproxy来使用
+ * 基于jquery的ajax
+ */
 export class JqueryEngine extends modelProxy.BaseEngine {
+    /**
+     * 构造
+     */
     constructor() {
         super();
 
         this.use(async (ctx: ModelProxy.IProxyCtx, next) => {
             let startTime = Date.now();
-
             await next();
-
             console.log(`执行时间${Date.now() - startTime}ms`);
         });
 
@@ -24,19 +30,20 @@ export class JqueryEngine extends modelProxy.BaseEngine {
 
             await next();
         });
-
-        this.use(async (ctx: ModelProxy.IProxyCtx, next) => {
-            console.log("complete");
-            await next();
-        });
     }
 
+    /**
+     * 执行代理
+     * @param instance {ModelProxy.IInterfaceModel} 接口实例
+     * @param options  {ModelProxy.IExeucte}        接口参数
+     * @return                {Promise<any>}
+     */
     async proxy(instance: ModelProxy.IInterfaceModel, options: ModelProxy.IExeucte): Promise<any> {
         let ctx: ModelProxy.IProxyCtx = {
             instance: instance,
             executeInfo: options
         }, fn = this.callback(() => {
-            console.log("over");
+
         });
 
         await fn(ctx);
